@@ -1,14 +1,17 @@
 package com.shopping.cart.model;
 
 import jakarta.persistence.Column;
+
+
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
+import lombok.Data;
 
 @Entity
-@Table(name = "item_table")
+@Table(name = "ITEM")
 public class Item {
 
 	@Id
@@ -20,13 +23,6 @@ public class Item {
 
 	@Column(name = "count", nullable = true)
 	private int count;
-
-	public Item(long id, String itemName, int count) {
-		super();
-		this.id = id;
-		this.itemName = itemName;
-		this.count = count;
-	}
 
 	public long getId() {
 		return id;
@@ -53,5 +49,5 @@ public class Item {
 	}
 	
 	
-
+	
 }
